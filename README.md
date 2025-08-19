@@ -37,7 +37,7 @@ The app detects your **current location**, displays **live weather conditions**,
 ## 🔗 Live Project
 
 View the live project here:  
-[https://your-live-project-url.com](https://your-live-project-url.com)
+[https://your-live-project-url.com](https://sauravbhilare.github.io/Weather-Forecast/)
 
 ---
 
