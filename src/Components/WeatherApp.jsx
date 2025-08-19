@@ -1,5 +1,5 @@
 import React from "react";
-import DetectingLocation from "./DetectingLocation"; // Adjust if needed
+import DetectingLocation from "./DetectingLocation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import clearIcon from "../assets/clear.gif";
@@ -214,6 +214,9 @@ const WeatherApp = () => {
               placeholder="Search any city"
               value={searchCity}
               onChange={(e) => setSearchCity(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === "Enter") fetchSearchWeather(searchCity);
+              }}
             />
             <button onClick={() => fetchSearchWeather(searchCity)}>
               <FontAwesomeIcon icon={faSearch} />
