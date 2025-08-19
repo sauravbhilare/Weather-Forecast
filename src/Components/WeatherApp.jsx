@@ -2,6 +2,11 @@ import React from "react";
 import DetectingLocation from "./DetectingLocation"; // Adjust if needed
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import clearIcon from "../assets/clear.gif";
+import cloudIcon from "../assets/cloud.gif";
+import rainIcon from "../assets/rain.gif";
+import snowIcon from "../assets/snow.gif";
+import foggyIcon from "../assets/foggy.gif";
 
 const WeatherApp = () => {
   const [time, setTime] = React.useState(new Date());
@@ -67,20 +72,20 @@ const WeatherApp = () => {
   const getWeatherIcon = (condition) => {
     switch (condition.toLowerCase()) {
       case "clear":
-        return "src/assets/clear.gif";
+        return clearIcon;
       case "clouds":
-        return "src/assets/cloud.gif";
+        return cloudIcon;
       case "rain":
       case "drizzle":
-        return "src/assets/rain.gif";
+        return rainIcon;
       case "snow":
-        return "src/assets/snow.gif";
+        return snowIcon;
       case "haze":
       case "mist":
       case "fog":
-        return "src/assets/foggy.gif";
+        return foggyIcon;
       default:
-        return "src/assets/clear.gif";
+        return clearIcon;
     }
   };
 
